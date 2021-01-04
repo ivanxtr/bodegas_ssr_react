@@ -3,32 +3,55 @@ import React from 'react'
 const Header = () => {
   return (
     <>
-    <div className="pos-f-t">
-    <div className="collapse" id="navbarToggleExternalContent">
-      <div className="bg-dark p-4">
-        <div className="f-lato-italic f-16 text-pink-2 pr-4 text-center hover">Registrarse</div>
-        <div className="f-lato-italic f-16 text-pink-2 pr-4 hover">Iniciar Sesion</div>
+    <div className="site-mobile-menu site-navbar-target">
+      <div className="site-mobile-menu-header">
+      <div className="site-mobile-menu-close">
+      <span className="icofont-close js-menu-toggle active"></span>
+      </div>
+      </div>
+      <div className="site-mobile-menu-body">
+        <ul className="site-nav-wrap">
+          <li className="has-children"><span className="arrow-collapse collapsed" data-toggle="collapse" data-target="#collapseItem0"></span>
+          </li>
+        </ul>
       </div>
     </div>
-    <div className="col-12 p-2 d-flex d-flex justify-content-between align-content-center box-shadow-gray">
-      <div className="f-lato-italic f-26 hover ml-94">
-        <a className="navbar-brand d-flex justify-content-center align-items-center" href="/">
-            <p className="text-pink-2 mt-2 mb-0 ml-2">Solobodegas.mx</p> 
-        </a>
+    <nav className="site-nav">
+      <div className="container">
+        <div className="site-navigation">
+          <a href="index.html" className="logo m-0">SoloBodegas.mx<span className="text-primary">.</span></a>
+            <ul className="js-clone-nav d-none d-lg-inline-block text-left site-menu">
+              <li><a href="index.html">Home</a></li>
+              <li className="has-children">
+                <a href="/">Dropdown</a>
+                  <ul className="dropdown">
+                    <li><a href="elements.html">Elements</a></li>
+                    <li className="has-children">
+                      <a href="/">Menu Two</a>
+                        <ul className="dropdown">
+                          <li><a href="/">Sub Menu One</a></li>
+                          <li><a href="/">Sub Menu Two</a></li>
+                          <li><a href="/">Sub Menu Three</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/">Menu Three</a></li>
+                  </ul>
+              </li>
+              <li><a href="buy.html">Buy</a></li>
+              <li className="active"><a href="rent.html">Rent</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <ul className="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right">
+              <li><a href="/">Sign up</a></li>
+              <li className="cta-button active"><a href="/">Login</a></li>
+            </ul>
+            <a href="/" className="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-none" data-toggle="collapse" data-target="/main-navbar">
+              <span></span>
+            </a>
+          </div>
       </div>
-      <div className="d-flex justify-content-center align-items-center">
-      </div>
-      <nav className="navbar navbar-light mr-94">
-        {
-          /*
-          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          */
-        }
-      </nav>
-    </div>
-    </div>
+    </nav>
     </>
   )
 }

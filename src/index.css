@@ -246,6 +246,12 @@ input[type="range"]::-ms-fill-upper {
   padding-top: 0;
 }
 /******************************* 
+            global classes 
+********************************/
+.site-mobile-menu {
+  display: none;
+}
+/******************************* 
             media queries 
 ********************************/
 @media (min-width: 576px) and (max-width: 1024px) {
@@ -261,9 +267,15 @@ input[type="range"]::-ms-fill-upper {
   .h-604 {
     height: 400px;
   }
+  .site-mobile-menu {
+    display: block;
+  }
 }
 
 @media (max-width: 576px) {
+  .site-mobile-menu {
+    display: block;
+  }
   .f-26 {
     font-size: 13px;
   }

@@ -5,6 +5,6 @@ import Listing from './Listings';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 
-// ReactDOM.hydrate(<Listing />, document.getElementById('root'));
+ReactDOM.hydrate(<Listing />, document.getElementById('root'));
 
 serviceWorker.register();

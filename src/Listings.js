@@ -1,8 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from './components/Header'
 import Footer from './components/Footer'
+import { ApiCallsFactory } from './factories/apiCalls'
 
 function Listings() {
+
+    useEffect(() => {
+        async function fetchData() {
+            const call = new ApiCallsFactory('/api/listings')
+            const response = await call.getData()
+            console.log(response)
+        }
+        fetchData()
+    },[])
+    
     return (
         <>
             <Header />

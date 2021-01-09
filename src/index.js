@@ -5,6 +5,11 @@ import Listing from './Listings';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.hydrate(<Listing />, document.getElementById('root'));
-
-serviceWorker.register();
+if(window.location.pathname === '/listings') {
+  ReactDOM.hydrate(<Listing />, document.getElementById('root'));
+  serviceWorker.register();
+}
+if(window.location.pathname === '/') {
+  ReactDOM.hydrate(<App />, document.getElementById('root'));
+  serviceWorker.register(); 
+}

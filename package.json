@@ -7,6 +7,9 @@
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
     "@babel/register": "^7.12.10",
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/react-fontawesome": "^0.1.14",
     "@pmmmwh/react-refresh-webpack-plugin": "0.4.2",
     "@svgr/webpack": "5.4.0",
     "@testing-library/jest-dom": "^5.11.8",
@@ -85,7 +88,7 @@
     "start": "node scripts/start.js",
     "build": "ts-node scripts/build.js",
     "test": "node scripts/test.js",
-    "ssr": "NODE_ENV=development BABEL_ENV=development ts-node server/index.js"
+    "ssr": "NODE_ENV=production BABEL_ENV=production ts-node server/index.js"
   },
   "eslintConfig": {
     "extends": [

@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBuilding, faCar, faDolly, faShieldAlt, faCube, faDiceD6, faLaptop } from '@fortawesome/free-solid-svg-icons'
+import { faBuilding, faCar, faDolly, faShieldAlt, faCube, faDiceD6, faLaptop, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 interface propsTypes {
   item: {
@@ -12,7 +12,8 @@ interface propsTypes {
     photo_1: string,
     price: number,
     sqft: number,
-    vigilancia: boolean
+    vigilancia: boolean,
+    id: number,
   },
   index: number,
   listings: {
@@ -79,6 +80,13 @@ const ItemView = (props: propsTypes) => {
                           <h3>
                             <span>{item.address}</span>
                           </h3>
+                        </div>
+                        <div className="more">
+                          <a
+                            className="d-flex justify-content-center align-items-center"
+                            href={`/detail/${item.id}`}>
+                            <FontAwesomeIcon icon={faArrowRight}/>
+                          </a>
                         </div>
                       </div>
                     </div>

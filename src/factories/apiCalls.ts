@@ -4,20 +4,21 @@ class ApiCallsFactory {
   private url: string
   private token: string
   private body: object | undefined
-  private baseURL = 'http://localhost:8000/'
+  private baseURL = process.env.REACT_APP_HOST
 
   constructor(
     url: string,
     token?: string | any,
     body?: object
   ) {
-    this.url = `${this.baseURL}${url}`
+    this.url = `${this.baseURL}/${url}`
     this.token = token
     this.body = body
   }
 
   public async getData(): Promise<object> {
     try {
+      console.log(process.env.REACT_APP_HOST)
       const response = await axios.get(this.url)
       return response.data
     } catch (error) {

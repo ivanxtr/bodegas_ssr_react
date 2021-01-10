@@ -1,5 +1,5 @@
-import React from 'react'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHome } from '@fortawesome/free-solid-svg-icons'
 const Header = () => {
   return (
     <>
@@ -19,31 +19,20 @@ const Header = () => {
     <nav className="site-nav">
       <div className="container">
         <div className="site-navigation">
-          <a href="index.html" className="logo m-0">SoloBodegas.mx<span className="text-primary">.</span></a>
+          <a href="/" className="logo m-0">SoloBodegas.mx<span className="text-primary">.</span></a>
             <ul className="js-clone-nav d-none d-lg-inline-block text-left site-menu">
-              <li><a href="index.html">Home</a></li>
-              <li className="has-children">
-                <a href="/">Dropdown</a>
-                  <ul className="dropdown">
-                    <li><a href="elements.html">Elements</a></li>
-                    <li className="has-children">
-                      <a href="/">Menu Two</a>
-                        <ul className="dropdown">
-                          <li><a href="/">Sub Menu One</a></li>
-                          <li><a href="/">Sub Menu Two</a></li>
-                          <li><a href="/">Sub Menu Three</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/">Menu Three</a></li>
-                  </ul>
+              <li>
+                <a href="/">
+                  <FontAwesomeIcon icon={faHome} />
+                </a>
               </li>
-              <li><a href="buy.html">Buy</a></li>
-              <li className="active"><a href="rent.html">Rent</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="buy.html">Compra</a></li>
+              <li className="active"><a href="rent.html">Renta</a></li>
+              <li><a href="about.html">Locales Comerciales</a></li>
+              <li><a href="contact.html">Contacto</a></li>
             </ul>
             <ul className="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right">
-              <li><a href="/">Sign up</a></li>
+              <li><a href="/">Registrate</a></li>
               <li className="cta-button active"><a href="/">Login</a></li>
             </ul>
             <a href="/" className="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-none" data-toggle="collapse" data-target="/main-navbar">

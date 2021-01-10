@@ -4,18 +4,27 @@ import Footer from './components/Footer'
 import ItemView from './components/ItemView'
 import TextBanner from './components/TextBanner'
 import Paginator from './components/Paginator'
+import Ads from './components/Ads'
 import { ApiCallsFactory } from './factories/apiCalls'
 
 function Listings() {
-
+    // state
     const [listings, setListings] = useState([])
+    const [count, setCount] = useState(0)
+    // fetch calls
     useEffect(() => {
         async function fetchData() {
             const call = new ApiCallsFactory('api/listings?page=1')
             const response = await call.getData()
             setListings(response)
         }
+        async function fetchCount() {
+            const call = new ApiCallsFactory('api/count')
+            const response = await call.getData()
+            setCount(response)
+        }
         fetchData()
+        fetchCount()
     },[])
     
     return (
@@ -32,40 +41,17 @@ function Listings() {
                             <ItemView listings={listings} />
                         </div>
                     </div>
-                    <Paginator />
+                    <Paginator count={count} page={1} />
                 </div>
                 : 
                 <div className="col-12 d-flex justify-content-center">
                     <img src="/assets/images/loading.gif" alt="loader"/>
                 </div> }
-
-            <div className="untree_co-section">
-                <div className="container">
-                    <div className="row gutter-v3">
-                    <div className="col-lg-6 mb-4 mb-lg-0">
-                        <div className="icon-wrap">
-                        <span className="icon-support"></span>
-                        </div>
-                        <div className="text">
-                        <h3 className="heading">Ask our Customer Service</h3>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                        </div>
-                    </div> 
-                    <div className="col-lg-6 mb-4 mb-lg-0">
-                        <div className="icon-wrap">
-                        <span className="icon-chat_bubble_outline"></span>
-                        </div>
-                        <div className="text">
-                        <h3 className="heading">Visit our Blog</h3>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                        </div>
-                    </div> 
-                    </div> 
-                </div> 
-            </div>
+            <Ads />
             <Footer />
         </>
     )
 }
 
 export default Listings
+    

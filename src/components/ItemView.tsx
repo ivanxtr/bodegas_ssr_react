@@ -84,7 +84,7 @@ const ItemView = (props: propsTypes) => {
                         <div className="more">
                           <a
                             className="d-flex justify-content-center align-items-center"
-                            href={`/detail/${item.id}`}>
+                            href={`/detail?id=${item.id}`}>
                             <FontAwesomeIcon icon={faArrowRight}/>
                           </a>
                         </div>

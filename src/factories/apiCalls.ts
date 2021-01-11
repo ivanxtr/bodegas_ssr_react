@@ -18,7 +18,6 @@ class ApiCallsFactory {
 
   public async getData(): Promise<object> {
     try {
-      console.log(process.env.REACT_APP_HOST)
       const response = await axios.get(this.url)
       return response.data
     } catch (error) {

@@ -41,18 +41,17 @@ const Footer = () => {
                 </div>
                 <div className="col-md-6 col-lg-2 pl-lg-5">
                     <div className="widget">
-                        <h3 className="heading">Pages</h3>
+                        <h3 className="heading">Paginas</h3>
                         <ul className="links list-unstyled">
                             <li><a href="/">Compra</a></li>
                             <li><a href="/">Renta</a></li>
                             <li><a href="/">Locales Comerciales</a></li>
-                            <li><a href="/">Contacto</a></li>
                         </ul>
                     </div>
                 </div>
                 <div className="col-md-6 col-lg-2">
                     <div className="widget">
-                        <h3 className="heading">Resources</h3>
+                        <h3 className="heading">Recursos</h3>
                             <ul className="links list-unstyled">
                                 <li><a href="/">Blog</a></li>
                                 <li><a href="/">Contacto</a></li>
@@ -61,7 +60,7 @@ const Footer = () => {
                 </div>
                 <div className="col-md-6 col-lg-4">
                     <div className="widget">
-                        <h3 className="heading">Contact</h3>
+                        <h3 className="heading">Contacto</h3>
                         <ul className="list-unstyled links">
                             <li>
                                 <FontAwesomeIcon icon={faEnvelope} />

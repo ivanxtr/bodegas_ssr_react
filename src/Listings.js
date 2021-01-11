@@ -11,6 +11,7 @@ function Listings() {
     // state
     const [listings, setListings] = useState([])
     const [count, setCount] = useState(0)
+    const [page, setPage] = useState(1)
     // fetch calls
     useEffect(() => {
         async function fetchData() {
@@ -26,6 +27,14 @@ function Listings() {
         fetchData()
         fetchCount()
     },[])
+
+    const getMoreItems = async (index) => {
+        setListings([])
+        const call = new ApiCallsFactory(`api/listings?page=${index}`)
+        const response = await call.getData()
+        setListings(response)
+        setPage(index)
+    }
     
     return (
         <>
@@ -41,11 +50,15 @@ function Listings() {
                             <ItemView listings={listings} />
                         </div>
                     </div>
-                    <Paginator count={count} page={1} />
+                    <Paginator
+                        count={count}
+                        page={page}
+                        getMoreItems={getMoreItems}
+                    />
                 </div>
                 : 
                 <div className="col-12 d-flex justify-content-center">
-                    <img src="/assets/images/loading.gif" alt="loader"/>
+                    <img src="/assets/images/loading2.gif" alt="loader"/>
                 </div> }
             <Ads />
             <Footer />

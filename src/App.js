@@ -27,7 +27,7 @@ function App() {
           <div className="col-xl-4 f-lato-italic f-26 text-center d-flex align-items-center m-h-100">
             Propiedades Industriales
           </div>
-          <a href="/listings">
+          <a href="/rent">
             <button type="button" className="btn btn-lg bg-pink f-lato-italic text-white button-size">
              Visitar
             </button>

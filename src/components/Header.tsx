@@ -26,10 +26,10 @@ const Header = () => {
                   <FontAwesomeIcon icon={faHome} />
                 </a>
               </li>
-              <li><a href="buy.html">Compra</a></li>
-              <li className="active"><a href="rent.html">Renta</a></li>
-              <li><a href="about.html">Locales Comerciales</a></li>
-              <li><a href="contact.html">Contacto</a></li>
+              <li><a href="/shop">Compra</a></li>
+              <li className="active"><a href="/rent">Renta</a></li>
+              <li><a href="/locales">Locales Comerciales</a></li>
+              <li><a href="/">Contacto</a></li>
             </ul>
             <ul className="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right">
               <li><a href="/">Registrate</a></li>

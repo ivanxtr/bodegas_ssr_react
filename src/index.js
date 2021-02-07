@@ -9,7 +9,7 @@ if(window.location.pathname === '/') {
   ReactDOM.hydrate(<App />, document.getElementById('root'));
   serviceWorker.register(); 
 }
-if(window.location.pathname === '/listings') {
+if(window.location.pathname === '/rent') {
   ReactDOM.hydrate(<Listings />, document.getElementById('root'));
   serviceWorker.register();
 }

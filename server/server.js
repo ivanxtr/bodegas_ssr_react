@@ -28,7 +28,7 @@ app.get("/", (req, res, next) => {
   });
 });
 
-app.get("/listings", (req, res, next) => {
+app.get("/rent", (req, res, next) => {
   fs.readFile(path.resolve("./build/index.html"), "utf-8", (err, data) => {
     if (err) {
       console.log(err);

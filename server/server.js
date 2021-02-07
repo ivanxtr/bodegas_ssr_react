@@ -9,7 +9,7 @@ import App from "../src/App";
 import Listings from "../src/Listings"
 import Listing from '../src/Listing'
 
-const PORT = 8001;
+const PORT = process.env.PORT || 8001;
 
 const app = express();
 

@@ -264,6 +264,9 @@ input[type="range"]::-ms-fill-upper {
   font-size: 18px;
   cursor: pointer;
 }
+.card-img-top {
+  max-height: 254px;
+}
 /******************************* 
             media queries 
 ********************************/
@@ -282,6 +285,9 @@ input[type="range"]::-ms-fill-upper {
   }
   .site-mobile-menu {
     display: block;
+  }
+  .card-img-top {
+    max-height: auto;
   }
 }
 
@@ -320,5 +326,8 @@ input[type="range"]::-ms-fill-upper {
   }
   .pt-2-custom {
     padding-top: 0.5rem
+  }
+  .card-img-top {
+    max-height: auto;
   }
 }

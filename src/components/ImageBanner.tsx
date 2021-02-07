@@ -1,3 +1,6 @@
+import 'photoswipe/dist/photoswipe.css'
+import 'photoswipe/dist/default-skin/default-skin.css'
+import { Gallery, Item } from 'react-photoswipe-gallery'
 interface propsTypes {
   listing: {
     address: string,
@@ -22,10 +25,13 @@ interface propsTypes {
     state: string,
     title: string,
     vigilancia: boolean,
-    zipcode: string
+    zipcode: string,
+    photo_: any
   }
 }
 const ImageBanner = (props: propsTypes) => {
+  const { photo_1, photo_2, photo_3, photo_4, photo_5, photo_6 } = props.listing
+  const images = [photo_1, photo_2, photo_3, photo_4, photo_5, photo_6]
   return (
     <>
       <div className="jumbotron" 
@@ -46,18 +52,29 @@ const ImageBanner = (props: propsTypes) => {
           </div>
       </div>
       <div className="container d-flex flex-wrap">
-        <section className="col-xl-4 col-lg-3 col-12 my-4">
-          <img className="card-img-top" src="http://localhost:8000/media/photos/2021/01/09/WhatsApp-Image-2018-04-06-at-11.17.32-AM.jpeg" alt="Card image cap" />
-        </section>
-        <section className="col-xl-4 col-lg-3 col-12 my-4">
-          <img className="card-img-top" src="http://localhost:8000/media/photos/2021/01/09/WhatsApp-Image-2018-04-06-at-11.17.32-AM.jpeg" alt="Card image cap" />
-        </section>
-        <section className="col-xl-4 col-lg-3 col-12 my-4">
-          <img className="card-img-top" src="http://localhost:8000/media/photos/2021/01/09/WhatsApp-Image-2018-04-06-at-11.17.32-AM.jpeg" alt="Card image cap" />
-        </section>
-        <section className="col-xl-4 col-lg-3 col-12 my-4">
-          <img className="card-img-top" src="http://localhost:8000/media/photos/2021/01/09/WhatsApp-Image-2018-04-06-at-11.17.32-AM.jpeg" alt="Card image cap" />
-        </section>
+        <Gallery>
+          { 
+            images.map((sr, index) => {
+              if (sr !== null) {
+                return (
+                  <Item
+                    original={`${process.env.REACT_APP_HOST + sr}`}
+                    width="1024"
+                    height="768"
+                    key={index}
+                  >
+                    {({ ref, open }) => (
+                      <section className="col-xl-4 col-lg-3 col-12 my-4">
+                        <img className="card-img-top" ref={ref as string | ((instance: HTMLImageElement | null) => void) | React.MutableRefObject<HTMLImageElement> | null | undefined} onClick={open} src={`${process.env.REACT_APP_HOST + sr}`} alt="" />
+                      </section>
+                    )}
+                  </Item>
+                )
+              }
+              return ''
+            })
+          }
+        </Gallery>
       </div>
     </>
   )

@@ -7,6 +7,7 @@ import ReactDOMServer from "react-dom/server";
 
 import App from "../src/App";
 import Listings from "../src/Listings"
+import Listing from '../src/Listing'
 
 const PORT = 8001;
 
@@ -37,6 +38,21 @@ app.get("/listings", (req, res, next) => {
       data.replace(
         '<div id="root"></div>',
         `<div id="root">${ReactDOMServer.renderToString(<Listings />)}</div>`
+      )
+    );
+  });
+});
+
+app.get("/detail", (req, res, next) => {
+  fs.readFile(path.resolve("./build/index.html"), "utf-8", (err, data) => {
+    if (err) {
+      console.log(err);
+      return res.status(500).send("Some error happened");
+    }
+    return res.send(
+      data.replace(
+        '<div id="root"></div>',
+        `<div id="root">${ReactDOMServer.renderToString(<Listing />)}</div>`
       )
     );
   });

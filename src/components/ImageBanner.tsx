@@ -96,7 +96,7 @@ const ImageBanner = (props: propsTypes) => {
     <>
       <div className="jumbotron" 
       style={{
-            backgroundImage: `url(${process.env.REACT_APP_HOST + props.listing.photo_main})`,
+            backgroundImage: `url(${props.listing.photo_main})`,
             backgroundPosition: "center",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat"
@@ -120,14 +120,14 @@ const ImageBanner = (props: propsTypes) => {
               if (sr !== null) {
                 return (
                   <Item
-                    original={`${process.env.REACT_APP_HOST + sr}`}
+                    original={`${sr}`}
                     width="1024"
                     height="768"
                     key={index}
                   >
                     {({ ref, open }) => (
                       <section className="col-xl-4 col-lg-3 col-12 my-4">
-                        <img className="card-img-top" ref={ref as string | ((instance: HTMLImageElement | null) => void) | React.MutableRefObject<HTMLImageElement> | null | undefined} onClick={open} src={`${process.env.REACT_APP_HOST + sr}`} alt="" />
+                        <img className="card-img-top" ref={ref as string | ((instance: HTMLImageElement | null) => void) | React.MutableRefObject<HTMLImageElement> | null | undefined} onClick={open} src={`${sr}`} alt="" />
                       </section>
                     )}
                   </Item>

@@ -64,7 +64,7 @@ const Footer = () => {
                         <ul className="list-unstyled links">
                             <li>
                                 <FontAwesomeIcon icon={faEnvelope} />
-                                <a className="pl-3" href="/">solobodegas.com@hotmail.com</a>
+                                <a className="pl-3" href="/">solobodegasenrenta.com@hotmail.com</a>
                             </li>
                             <li>
                                 <FontAwesomeIcon icon={faPhoneAlt} />

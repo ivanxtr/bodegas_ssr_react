@@ -99,19 +99,21 @@ const ImageBanner = (props: propsTypes) => {
             backgroundImage: `url(${props.listing.photo_main})`,
             backgroundPosition: "center",
             backgroundSize: "cover",
-            backgroundRepeat: "no-repeat"
+            backgroundRepeat: "no-repeat",
+            height: "353px"
       }}>
           <div className="container">
-            <h4 className="display-4">{props.listing.title}</h4>
-            <p>
-              <button className="btn btn-primary btn-lg">
-                Mas Informacion »
-              </button>
-            </p>
           </div>
       </div>
       <div className="container">
+        <h2 className="display-4">{props.listing.title}</h2>
+        <h3>${props.listing.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</h3>
         <p className="">{props.listing.description}.</p>
+        <p>
+          <button className="btn btn-primary btn-lg">
+            Mas Informacion »
+          </button>
+        </p>
       </div>
       <div className="container d-flex flex-wrap">
         <Gallery>

@@ -18,7 +18,8 @@ interface propsTypes {
   index: number,
   listings: {
     map: any
-  } | object[]
+  } | object[],
+  type: string
 }
 
 const ItemView = (props: propsTypes) => {
@@ -31,7 +32,7 @@ const ItemView = (props: propsTypes) => {
                     <div className="property-specs">
                       <strong className="price d-inline-block">
                         {item.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-                      </strong>/month
+                      </strong>{ props.type !== 'shop' ? '/month' : ''}
                       <ul className="list-unstyled specs">
                         {item.parking ?
                             <li className="d-inline-flex align-items-center">

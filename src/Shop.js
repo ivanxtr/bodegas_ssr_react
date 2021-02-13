@@ -40,14 +40,14 @@ function Listings() {
         <>
             <Header />
             <TextBanner
-                title="Propiedades en Renta"
+                title="Propiedades en Venta"
                 text="Si no encuentras lo que necesitas, porfavor contactanos a solobodegasrenta.com@hotmail.com"
             />
             { listings.length > 0 ?
                 <div className="untree_co-section bg-light">
                     <div className="container">
                         <div className="row">
-                            <ItemView listings={listings} />
+                            <ItemView listings={listings} type={'shop'}/>
                         </div>
                     </div>
                     <Paginator

@@ -40,7 +40,7 @@ function Listings() {
         <>
             <Header />
             <TextBanner
-                title="Propiedades en Renta"
+                title="Locales Comerciales"
                 text="Si no encuentras lo que necesitas, porfavor contactanos a solobodegasrenta.com@hotmail.com"
             />
             { listings.length > 0 ?

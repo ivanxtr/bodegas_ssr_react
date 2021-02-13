@@ -27,7 +27,7 @@ const ItemView = (props: propsTypes) => {
         return (
             <div className="col-md-6 col-lg-4" key={index}>
                 <div className="property-entry">
-                    <img src={process.env.REACT_APP_HOST + item.photo_1} alt="main" width="350" height="210"/>
+                    <img src={item.photo_1} alt="main" width="350" height="210"/>
                     <div className="property-specs">
                       <strong className="price d-inline-block">
                         {item.price}

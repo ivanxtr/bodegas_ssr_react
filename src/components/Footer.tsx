@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebookF, faTwitter, faInstagram, faAppStore, faAndroid } from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope, faPhoneAlt, faMapMarkedAlt, faMap } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faPhoneAlt, faMapMarkedAlt } from '@fortawesome/free-solid-svg-icons'
 
 const Footer = () => {
   return(

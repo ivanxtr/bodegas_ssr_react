@@ -14,10 +14,10 @@ function App() {
           <img className="w-100" alt="house" src={'/assets/images/house.jpg'}/>
         </div>
         <div className="col-6 d-flex justify-content-center align-items-center flex-column p-0 flex-wrap">
-          <div className="col-xl-3 f-lato-italic f-26 text-center d-flex align-items-center">Casas en Renta y Venta</div>
-          <a href="/houses">
+          <div className="col-xl-3 f-lato-italic f-26 text-center d-flex align-items-center">Propiedades en Venta</div>
+          <a href="/shop">
             <button type="button" className="btn btn-lg f-lato-italic text-pink bg-white button-size border-pink">
-              Buscar Casa
+              Venta
             </button>
           </a>
         </div>
@@ -25,11 +25,11 @@ function App() {
       <div className="col-12 d-flex justify-content-between p-0">
         <div className="col-6 d-flex justify-content-center align-items-center flex-column p-0">
           <div className="col-xl-4 f-lato-italic f-26 text-center d-flex align-items-center m-h-100">
-            Propiedades Industriales
+            Propiedades en Renta
           </div>
           <a href="/rent">
             <button type="button" className="btn btn-lg bg-pink f-lato-italic text-white button-size">
-             Visitar
+             Renta
             </button>
           </a>
         </div>
@@ -48,7 +48,7 @@ function App() {
           </a>
         </div>
       </div>
-      <div className="col-12 d-flex justify-content-between py-5">
+      {/* <div className="col-12 d-flex justify-content-between py-5">
         <div className="col-6 d-flex justify-content-center align-items-center flex-column p-0">
           <div className="col-xl-4 f-lato-italic f-26 text-center d-flex align-items-center m-h-100">
             Noticias del Sector Inmobiliario
@@ -62,7 +62,7 @@ function App() {
         <div className="col-6 d-flex justify-content-center align-items-center p-0">
           <img className="w-1-3" alt="house" src={'/assets/images/news.jpg'}/>
         </div>
-      </div>
+      </div> */}
       <Footer />
     </>
   );

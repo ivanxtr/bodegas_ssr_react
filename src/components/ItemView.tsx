@@ -30,7 +30,7 @@ const ItemView = (props: propsTypes) => {
                     <img src={item.photo_1} alt="main" width="350" height="210"/>
                     <div className="property-specs">
                       <strong className="price d-inline-block">
-                        {item.price}
+                        {item.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                       </strong>/month
                       <ul className="list-unstyled specs">
                         {item.parking ?

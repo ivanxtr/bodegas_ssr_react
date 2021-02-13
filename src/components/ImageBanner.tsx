@@ -82,9 +82,9 @@ const ImageBanner = (props: propsTypes) => {
     createData('Parque Industrial', whatIcon(industrial_park), ''),
     createData('Area de oficinas', whatIcon(office), ''),
     createData('Area de Estacionamientos', whatIcon(parking), ''),
-    createData('Precio', '', `${price} $`),
-    createData('Construccion', '', `${sqft} mts`),
-    createData('Superficie', '', `${lot_size} mts`),
+    createData('Precio', '', `${price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} $`),
+    createData('Construccion', '', `${sqft} M²`),
+    createData('Superficie', '', `${lot_size} M²`),
     createData('Ciudad', '', city),
     createData('Estado', '', state),
     createData('Codigo Postal', '', zipcode)

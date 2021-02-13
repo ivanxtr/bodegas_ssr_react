@@ -102,14 +102,16 @@ const ImageBanner = (props: propsTypes) => {
             backgroundRepeat: "no-repeat"
       }}>
           <div className="container">
-            <h1 className="display-4 text-white">{props.listing.title}</h1>
-            <p className="text-white">{props.listing.description}.</p>
+            <h4 className="display-4">{props.listing.title}</h4>
             <p>
               <button className="btn btn-primary btn-lg">
                 Mas Informacion »
               </button>
             </p>
           </div>
+      </div>
+      <div className="container">
+        <p className="">{props.listing.description}.</p>
       </div>
       <div className="container d-flex flex-wrap">
         <Gallery>

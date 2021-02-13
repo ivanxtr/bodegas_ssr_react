@@ -32,8 +32,8 @@ const Header = () => {
               <li><a href="/">Contacto</a></li>
             </ul>
             <ul className="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right">
-              <li><a href="/">Registrate</a></li>
-              <li className="cta-button active"><a href="/">Login</a></li>
+              <li className="d-none"><a href="/">Registrate</a></li>
+              <li className="cta-button active d-none"><a href="/">Login</a></li>
             </ul>
             <a href="/" className="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-none" data-toggle="collapse" data-target="/main-navbar">
               <span></span>

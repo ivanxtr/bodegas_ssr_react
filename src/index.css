@@ -267,6 +267,14 @@ input[type="range"]::-ms-fill-upper {
 .card-img-top {
   max-height: 254px;
 }
+.display-4 {
+  background-color: rgba(255,255, 255, 0.5);
+  border-radius: 5px;
+  padding: 10px;
+}
+.card-img-top {
+  cursor: pointer;
+}
 /******************************* 
             media queries 
 ********************************/

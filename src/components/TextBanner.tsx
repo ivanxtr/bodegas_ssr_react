@@ -10,7 +10,7 @@ const TextBanner = (props: propsTypes) => {
       <div className="container">
         <div className="row justify-content-center text-center">
         <div className="col-lg-6">
-            <h2 className="text-secondary heading-2">{ props.title }</h2>
+            <h1 className="text-secondary heading-2">{ props.title }</h1>
             <p>{ props.text }</p>
         </div>
         </div>

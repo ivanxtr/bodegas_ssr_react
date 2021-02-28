@@ -26,7 +26,7 @@ const ItemView = (props: propsTypes) => {
   return (
       props.listings.map((item: propsTypes['item'], index: propsTypes['index']) => {
         return (
-            <div className="col-md-6 col-lg-4" key={index}>
+            <div className="col-md-6 col-lg-4" key={index} onClick={() => window.open(`/detail?id=${item.id}`)}>
                 <div className="property-entry">
                     <img src={item.photo_1} alt="main" width="350" height="210"/>
                     <div className="property-specs">
@@ -85,7 +85,10 @@ const ItemView = (props: propsTypes) => {
                         <div className="more">
                           <a
                             className="d-flex justify-content-center align-items-center"
-                            href={`/detail?id=${item.id}`}>
+                            href={`/detail?id=${item.id}`}
+                            target="_blank"
+                            rel="noreferrer"
+                            >
                             <FontAwesomeIcon icon={faArrowRight}/>
                           </a>
                         </div>

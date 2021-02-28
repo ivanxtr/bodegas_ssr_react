@@ -20,7 +20,7 @@ function Listings() {
             setListings(response)
         }
         async function fetchCount() {
-            const call = new ApiCallsFactory('api/count')
+            const call = new ApiCallsFactory('api/locale-count')
             const response = await call.getData()
             setCount(response)
         }

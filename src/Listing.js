@@ -15,7 +15,6 @@ function Listing() {
       const call = new ApiCallsFactory(`api/listing/${finalId}`)
       const response = await call.getData()
       setListing(response)
-      console.log(listing)
     }
     fetchData()
     // eslint-disable-next-line react-hooks/exhaustive-deps 

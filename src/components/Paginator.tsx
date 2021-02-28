@@ -13,7 +13,7 @@ const Paginator = (props: propTypes) => {
   const pages: any = [];
   const howMany: any = () => {
     const index = Math.round(props.count.length / 9)
-    for (let i = 0; i <= index; i++) {
+    for (let i = 0; i <= index - 1; i++) {
       pages.push(i + 1)
     }
   }
